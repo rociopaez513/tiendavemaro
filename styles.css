@@ -1,0 +1,189 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Selector de etiqueta */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #2c2c2c;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- HEADER (Flexbox - Clase 6) ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #b6ded1;
+  padding: 1rem 2rem; /* unidad relativa (Clase 5) */
+  border-bottom: 2px solid #4c8c78;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__img {
+  max-height: 50px;
+}
+
+.header__titulo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* ---------- NAV (Flexbox - Clase 6) ---------- */
+.nav__list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav__link:hover {
+  background-color: #4c8c78;
+  color: #fff;
+}
+
+/* ---------- CARRITO (header) ---------- */
+.header__carrito {
+  font-weight: bold;
+  background-color: #4c8c78;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* ---------- MAIN ---------- */
+.main {
+  padding: 2rem;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.intro h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- CATÁLOGO DE PRODUCTOS (Grid - Clase 7 + DOM - Clase 12) ---------- */
+.productos__titulo {
+  margin-bottom: 1rem;
+}
+
+.productos__grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna en celulares */
+  gap: 1.5rem;
+}
+
+/* Tablets */
+@media (min-width: 600px) {
+  .productos__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Laptops y monitores */
+@media (min-width: 992px) {
+  .productos__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card__nombre {
+  font-size: 1.2rem;
+  color: #2c2c2c;
+}
+
+.card__precio {
+  font-weight: bold;
+  color: #4c8c78;
+}
+
+.card__descripcion {
+  color: #555555;
+  font-size: 0.95rem;
+}
+
+.card__botones {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.card__boton {
+  flex: 1;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn-descripcion {
+  background-color: #e0e0e0;
+  color: #2c2c2c;
+}
+
+.btn-descripcion:hover {
+  background-color: #cccccc;
+}
+
+.btn-carrito {
+  background-color: #4c8c78;
+  color: #ffffff;
+}
+
+.btn-carrito:hover {
+  background-color: #3a6b5c;
+}
+
+/* ---------- FOOTER (selector de ID de ejemplo no aplica; box model) ---------- */
+.footer {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+#buscador{display:block;margin:20px auto;padding:10px;width:min(400px,90%)}

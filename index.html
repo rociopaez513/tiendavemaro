@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Vemaro | Velas y Decoración</title>
+    <meta name="description" content="Tienda Vemaro: velas, difusores y decoración.">
+    <meta name="keywords" content="velas,difusores,deco">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__logo">
+      <a href="./index.html">
+        <img class="header__img" src="img/Logo1.png" alt="Logo de Tienda Vemaro">
+      </a>
+      <p class="header__titulo">Tienda Vemaro</p>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="./index.html">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="./pages/tienda.html">Tienda</a></li>
+        <li class="nav__item"><a class="nav__link" href="./pages/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__carrito">
+      🛒 <span id="carrito-contador">0</span> productos
+    </div>
+  </header>
+
+  <main class="main">
+<input id="buscador" placeholder="Buscar producto...">
+
+    <section class="intro">
+      <h2>Aroma y Deco</h2>
+      <p>
+        Este es el proyecto de la página web de mi <strong>emprendimiento</strong> de
+        <em>velas aromáticas</em><s>, difusores</s> y <em>decoración</em> para el hogar.
+      </p>
+    </section>
+
+    <section class="productos">
+      <h2 class="productos__titulo">Nuestros productos</h2>
+
+      <!-- Las tarjetas de producto se generan dinámicamente con JavaScript
+           (ver scripts.js: createElement, appendChild y un array de objetos) -->
+      <div id="contenedor-productos" class="productos__grid"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Acerca de nosotros - contacto - instagram - dirección.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
